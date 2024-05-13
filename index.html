@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=defice-width, initial-scale=1.0">
+    <title>LaTeX CSS</title>
+    <link rel="stylesheet" href="LaTeX.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <span class="latex">L<span>a</span>T<span>e</span>X</span>
+            .CSS</h1>
+        <p class="author">
+            DongHyo Lee <br />
+            13th,May,2024
+        </p>
+    </header>
+
+    <main>
+        <article class="abstract">
+            <h2>Abstract</h2>
+            <p>This is the place where the subjects that most undergraduates majoring Mathematics would learn. Nothing special, just going write what I want.</p>
+            <p class="pen">학부생으로서 배웠던 수학을 총망라하여 두서없이 작성하는 곳이 되겠다. 내 원하는 대로 쓸거다.</p>
+        </article>
+        <nav>
+            <ol>
+                <li><a href="#discrete">Discrete Mathematics</a></li>
+                <li><a href="#differential">Differential Equation</a></li>
+                <li><a href="#topology">Topology</a></li>
+                <li><a href="#number">Number Theory</a></li>
+                <li><a href="#environments">Environments</a>
+        </nav>
+        <section>
+            <h2 id="discrete">Discrete Mathematics</h2>
+            <p class="pen">
+                제대로 안한건지, 얕게 한건지는 몰라도 수학들 중에서 제일 신선하고 재미있었다. 좀 더 수학을 공부해야겠다는 생각이
+                든 과목이다.
+            </p>
+            <p>$\int f(x)dx$</p>
+        </section>
+        <section>
+            <h2 id="differential">Differential Equation</h2>
+            <p class="pen">
+                미방은 고등수학의 연장선 느낌이 든다. 공대애들이 훨씬 더 잘하는 것 같다. 문제는 공대생들보다도 못푸니 정리들이라도 증명해야겠다.
+            </p>
+        </section>
+        <section>
+            <h2 id="topology">Topology</h2>
+            <p class="pen">
+                나에게 이런걸 왜하냐고 묻는다면, 나는 당당히 "몰라"라고 말할 것이다.
+                하지만 수학과 해석학을 듣고 바로 들어보는 입장에서, 뭔가 실수에서만 사용되는 개념을 일반화시키고 정리로 사용된 open, closed를 
+                정의로 사용하면서 시작하니 뭔가 신기하긴 하다.
+            </p>
+            <p>$\int f(x)dx$</p>
+        </section>
+        <section>
+            <h2 id="number">Number Theory</h2>
+            <p class="pen">
+                정수론이지만, integer에 그치지 않는, 영문 그대로 수에 대해 배웠던 과목이다. 데데킨트 컷이 젤 인상깊고, 데데킨트 컷밖에
+                생각이 나지 않았던..
+            </p>
+        </section>
+        <section>
+            <h2 id="environments">Environment</h2>
+            <h3>Theorem and Proofs(Temporary placement, 철거예정)</h3>
+            <div class="theorem">
+                (Schwartz inequality)Let $a_{1}, \ldots , a_{n}$ and $b_{1}, \ldots , b_{n}$ be complex numbers.
+                $$|\sum_{k=1}^{n}a_{k}\bar{b_{k}}|^{2}\leq (\sum_{k=1}^{n}|a_{k}|^{2})(\sum_{k=1}^{n}|b_{k}|^{2})$$
+            </div>
+            <div class="proof">
+                Know that $\langle \vec{x},\vec{x} \rangle \geq 0 \textbf{  } \forall \vec{x}$. Also, since we defined $e^{i\theta} = \frac{\langle \vec{x},\vec{y} \rangle}{|\langle \vec{x},\vec{y} \rangle|}$, we know that $e^{-i\theta} = \frac{|\langle \vec{x},\vec{y} \rangle|}{\langle \vec{x},\vec{y} \rangle}$. By the definition of inner product, $\langle c\vec{x},\vec{y} \rangle = c\langle \vec{x},\vec{y} \rangle$. Then, we also get $\langle \vec{x},c\vec{y} \rangle = \bar{c}\langle \vec{x},\vec{y} \rangle$
+\begin{align*}
+0\leq f(t) = \langle \vec{x}+te^{i\theta}\vec{y}, \vec{x}+te^{i\theta}\vec{y}\rangle &= \langle \vec{x},\vec{x} \rangle + \langle \vec{x},te^{i\theta}\vec{y} \rangle + \langle te^{i\theta}\vec{y},\vec{x} \rangle + \langle te^{i\theta}\vec{y},te^{i\theta}\vec{y} \rangle\\
+&= \langle \vec{x},\vec{x} \rangle + te^{-i\theta}\langle \vec{x},\vec{y} \rangle + te^{i\theta}\langle \vec{y},\vec{x} \rangle + te^{i\theta}te^{-i\theta}\langle \vec{y},\vec{y} \rangle\\
+&= \langle \vec{x},\vec{x} \rangle + t|\langle \vec{x},\vec{y} \rangle| + t\frac{\langle \vec{x},\vec{y} \rangle \langle \vec{y},\vec{x} \rangle}{|\langle \vec{x},\vec{y} \rangle|} + t^{2}\langle \vec{y},\vec{y} \rangle\\
+&= \langle \vec{x},\vec{x} \rangle + 2t|\langle \vec{x},\vec{y} \rangle| + t^{2}\langle \vec{y},\vec{y} \rangle \text{(Quadratic inequality of t)}\\
+\end{align*}
+Since this holds for every $t\in \mathbb{R}$,
+$$D = |\langle \vec{x},\vec{y} \rangle|^{2} - \langle \vec{x},\vec{x} \rangle \langle \vec{y},\vec{y} \rangle \leq 0.$$
+$LHS$ of Schwartz inequality is $|\langle \vec{x},\vec{y} \rangle|^{2}$ and $RHS$ is $\langle \vec{x},\vec{x} \rangle \langle \vec{y},\vec{y} \rangle = |\vec{x}|^{2}|\vec{y}|^{2}$, so it's showed by $D$.
+            </div>
+            <div class="definition">Definition of some of things...</div>
+        </section>
+
+        <section>
+            <h2>Formatting Texts</h2>
+            <div>
+                Some text can be <strong>bold</strong> and <sup>some</sup> can be <em>emphasized</em>.
+            <blockquote class="pen">진짜 하기 싫다.. <cite>-이동효</cite>
+            </blockquote>
+            </div>
+        </section>
+
+    </main>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {inlineMath: [["$","$"],["\\(","\\)"]]<!-- $수식$도 표현할 수 있게 -->
+            }
+        }
+    </script>
+</body>
+</html>
